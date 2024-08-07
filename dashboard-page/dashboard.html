@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StashDash</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img src="images/profile.png" alt="User Profile" class="profile-img">
+            <h2 id="user-name">User Name</h2>
+            <span class="badge">PRO</span>
+        </div>
+        <nav>
+            <ul>
+                <li class="active">Stocks</li>
+                <li>Mutual Funds</li>
+                <li>Trade</li>
+            </ul>
+        </nav>
+        <button class="logout">Log out</button>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>Welcome back, <span id="header-name">User Name</span>!</h1>
+            <p>Take a look at the updated StashDash overview</p>
+        </header>
+        <div class="content">
+            <div class="overview">
+                <div class="nifty">
+                    <h2 style="color: white;">NIFTY 50</h2>
+                    <div class="chart" id="chart1"></div>
+                    <p style="color: white;">$43,35B <span class="change">+13%</span></p>
+                </div>
+                <div class="sensex">
+                    <h2 style="color: white;">SENSEX</h2>
+                    <div class="chart" id="chart1"></div>
+                    <p style="color: white;">-4.31% <span class="small-change">-0.07% this month</span></p>
+                </div>
+                <div class="makerdom">
+                    <h2 style="color: white;">Maker Dominance</h2>
+                    <div class="chart" id="chart1"></div>
+                    <p style="color: white;">15.62% <span class="small-change">+1.31% this month</span></p>
+                </div>
+            </div>
+            <div class="protocols">
+                <h2>Most Brought</h2>
+                <div class="protocol-chart">
+                    <div class="protocol">
+                        <div class="protocol-circle" style="background-color: #4CAF50;">IRFC 182.41INR</div>
+                    </div>
+                    <div class="protocol">
+                        <div class="protocol-circle" style="background-color: #FFC107;">Zomato 265.67INR</div>
+                    </div>
+                    <div class="protocol">
+                        <div class="protocol-circle" style="background-color: #9C27B0;">Tata Steel 153.86INR</div>
+                    </div>
+                    <div class="protocol">
+                        <div class="protocol-circle" style="background-color: #4cbbca;">GTL Infrastructure 2.77INR</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('user-name').textContent = username;
+                document.getElementById('header-name').textContent = username;
+            } else {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>
