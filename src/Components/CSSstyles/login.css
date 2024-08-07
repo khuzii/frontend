@@ -1,0 +1,68 @@
+body{
+    background-image: url("../../Images/home_collage.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+  }
+
+/* .bgi{
+  filter: blur(8px);
+} */
+
+  .login-inner {
+    background-color: rgba(251, 251, 251, 0.9);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 12%;
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .headinglogin {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .column {
+    flex-basis: 48%;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  
+  .login-sub {
+    background-color: #194F92;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button[type='submit']:hover {
+    background-color: #194F60;
+  }
